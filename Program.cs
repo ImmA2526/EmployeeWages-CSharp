@@ -26,7 +26,7 @@ namespace EmployeeWage
             {
                 Console.WriteLine("The Employee is absent ");
             }
-            Salary = Wage * WagePerHour; 
+            Salary = Wage * WagePerHour;
             Console.WriteLine("Salary is :" + Salary);
         }
     }
