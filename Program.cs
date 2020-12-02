@@ -14,20 +14,20 @@ namespace EmployeeWage
             int Wage = 0;
             Random Number = new Random();
             int Num = Number.Next(0, 3);
-            if (Num == FullTime)
+            switch (Num)
             {
-                Wage = 8;
-            }
-            else if (Num == PartTime)
-            {
-                Wage = 4;
-            }
-            else
-            {
-                Console.WriteLine("The Employee is absent ");
+                case FullTime:
+                    Wage = 8;
+                    break;
+                case PartTime:
+                    Wage = 4;
+                    break;
+                default:
+                    Wage = 0;
+                    break;
             }
             Salary = Wage * WagePerHour;
-            Console.WriteLine("Salary is :" + Salary);
+            Console.WriteLine("Employee is Present and Salary is: " + Salary);
         }
     }
 }
