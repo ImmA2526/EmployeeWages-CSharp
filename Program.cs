@@ -9,9 +9,9 @@ namespace EmployeeWage
         const int WagePerHour = 20;
         public static int WorkDay = 20;
         public static int WorkHrs = 100;
-        static void Main(string[] args)
+        public static void ComputeWage()
         {
-            Console.WriteLine("************Welcome To Employee Wages Problem***************");
+
             int Salary = 0, Wage = 0, TotalWage = 0;
             int TotalHrs = 0, TotalDay = 0;
 
@@ -38,6 +38,12 @@ namespace EmployeeWage
             }
             Salary = TotalHrs * WagePerHour;
             Console.WriteLine("Employee is Present and Salary is: " + Salary);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("************Welcome To Employee Wages Problem***************");
+            ComputeWage();
         }
     }
 }
