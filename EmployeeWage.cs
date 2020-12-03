@@ -62,10 +62,7 @@ namespace EmployeeWages
         }
         public int getTotalWage(string company)
         {
-            Console.WriteLine("Inside GetTotalWage Method");
-            int result = this.CompanytoEmpWageMap[company].Salary;
-            Console.WriteLine("TotalWage {0}", result);
-            return result;
+            return this.CompanytoEmpWageMap[company].Salary;
         }
     }
 }

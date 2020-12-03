@@ -11,7 +11,7 @@ namespace EmployeeWages
             Result.AddCompanyWage("Telegram", 12, 3, 10);
             Result.AddCompanyWage("Jio", 14, 4, 18);
             Result.ComputeWages();
-           
+            
         }
     }
 }
