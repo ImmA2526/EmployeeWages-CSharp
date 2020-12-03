@@ -11,7 +11,8 @@ namespace EmployeeWages
         public int WorkHrs;
         public string Company;
         public int Salary;
-
+        public int TotalWageWithDailyWage;
+        public int DailyWage;
         public CompanyEmpWage(string Company, int WagePerHour, int WorkDay, int WorkHrs)
         {
             this.Company = Company;
@@ -27,7 +28,7 @@ namespace EmployeeWages
 
         public string toString()
         {
-            return "Total Emplyee wages for compny :" + this.Company + "is : " + this.Salary;
+            return "Total Emplyee wages for compny :" + this.Company + "is : " + this.Salary+ "\n Daily Wage For Company" +this.Company+ "is: " +this.DailyWage+ "\n Total Employee Wage Along With Daily Wage:" +this.TotalWageWithDailyWage;
         }
     }
 }

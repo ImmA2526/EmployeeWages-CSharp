@@ -58,8 +58,12 @@ namespace EmployeeWages
                 TotalHrs += Wage;
                 Console.WriteLine("Day:  " + TotalDay + "  Emp Hrs: " + Wage);
             }
+            CompanyEmpWage.DailyWage = Wage * CompanyEmpWage.WagePerHour;
+            CompanyEmpWage.TotalWageWithDailyWage = Wage * CompanyEmpWage.WagePerHour+CompanyEmpWage.DailyWage;
+
             return TotalHrs * CompanyEmpWage.WagePerHour;
         }
+
         public int getTotalWage(string company)
         {
             return this.CompanytoEmpWageMap[company].Salary;
