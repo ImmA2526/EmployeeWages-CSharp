@@ -11,27 +11,27 @@ namespace EmployeeWages
         public int NumofCompany = 0;
         public CompanyEmpWage[] CompanyWageArray;
         private Dictionary<string, CompanyEmpWage> CompanytoEmpWageMap;
-
+        private LinkedList<CompanyEmpWage> CompanyWageList;
         public EmployeeWage()
         {
             this.CompanytoEmpWageMap = new Dictionary<string, CompanyEmpWage>();
-            this.CompanyWageArray = new CompanyEmpWage[5];
+            this.CompanyWageList=new LinkedList<CompanyEmpWage> ();
+           
         }
 
         public void AddCompanyWage(string Company, int WagePerHour, int WorkDay, int WorkHrs)
         {
-            CompanyWageArray[NumofCompany] = new CompanyEmpWage(Company, WagePerHour, WorkDay, WorkHrs);
             CompanyEmpWage CompanyEmpWage =new CompanyEmpWage(Company, WagePerHour, WorkDay, WorkHrs);
-            CompanytoEmpWageMap.Add(Company, CompanyEmpWage);
-            NumofCompany++;
+            this.CompanyWageList.AddLast(CompanyEmpWage);
+            this.CompanytoEmpWageMap.Add(Company, CompanyEmpWage); 
         }
 
         public void ComputeWages()
         {
-            for (int i = 0; i < NumofCompany; i++)
+            foreach (CompanyEmpWage companyEmpWage in this.CompanyWageList)
             {
-                CompanyWageArray[i].TotalWage(this.ComputeWage(this.CompanyWageArray[i]));
-                Console.WriteLine(this.CompanyWageArray[i].toString());
+                companyEmpWage.TotalWage(this.ComputeWage(companyEmpWage));
+                Console.WriteLine(companyEmpWage.toString());
             }
         }
 
