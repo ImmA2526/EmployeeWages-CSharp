@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace EmployeeWages
 {
@@ -11,7 +11,8 @@ namespace EmployeeWages
             Result.AddCompanyWage("Telegram", 12, 3, 10);
             Result.AddCompanyWage("Jio", 14, 4, 18);
             Result.ComputeWages();
-            
+            Console.WriteLine("Total Wage for Telegram  " + Result.getTotalWage("Telegram"));
+            Console.WriteLine("Total Wage for Jio  " + Result.getTotalWage("Jio"));
         }
     }
 }
