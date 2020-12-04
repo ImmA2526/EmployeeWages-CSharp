@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -27,7 +27,7 @@ namespace EmployeeWages
 
         public string toString()
         {
-            return "Total Emplyee wages for compny :" + this.Company + "is : " + this.Salary;
+            return "Total Emplyee wages for Compny :" + this.Company + "is : " + this.Salary;
         }
     }
 }
